@@ -1,0 +1,17 @@
+{
+  "name": "Fb Block",
+  "version": "10",
+  "description": "it will show notification against fb page!!",
+  "icons":{"fb" :"fb_block_icon.png", "fb2" :"fb_block_small.jpg"},
+  "permissions": [
+    "notifications","tabs", "https://www.facebook.com/"
+  ],
+  "options_page": "fb.html",
+  "background": { "scripts": ["fb.js"] },
+  "manifest_version": 2,
+  "content_scripts": [{
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["content.js"]
+  }]
+}
+
